@@ -279,7 +279,8 @@ begin
     Result := nil;
 end;
 
-function HookProcInModule(DLLName, FuncName: PChar; NewFunc: Pointer): Pointer;
+function HookProcInMode(DLLName, FuncName: PChar; NewFunc: Pointer): Pointer;
+  overload;
 begin
   if not HookProcInModule(DLLName, FuncName, NewFunc, Result) then
     Result := nil;
